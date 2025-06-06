@@ -2,12 +2,13 @@ import CardList from "./ui/CardList";
 import { useSearch } from "../contexts/SearchContext";
 
 export default function Main() {
-  const { movies } = useSearch();
+  const { movies, series } = useSearch();
 
   return (
     <main>
       <CardList products={movies} />
-      {/* <CardList /> */}
+      <hr></hr>
+      <CardList products={series} />
     </main>
   );
 }

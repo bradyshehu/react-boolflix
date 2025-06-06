@@ -11,6 +11,7 @@ const SearchContext = createContext();
 
 const SearchProvider = ({ children }) => {
   const [movies, setMovies] = useState([]);
+  const [series, setSeries] = useState([]);
 
   const search = (query) => {
     const allParams = {
@@ -31,10 +32,22 @@ const SearchProvider = ({ children }) => {
       }));
       setMovies(result);
     });
+
+    axios.get(`${apiUrl}tv?${params}`).then((res) => {
+      const result = res.data.results.map((movie) => ({
+        id: movie.id,
+        title: movie.name,
+        ogTitle: movie.original_name,
+        ogLanguage: movie.original_language,
+        rating: movie.vote_average,
+      }));
+      setSeries(result);
+    });
   };
 
   const searched = {
     movies,
+    series,
     search,
   };
 
