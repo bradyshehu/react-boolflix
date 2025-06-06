@@ -1,12 +1,12 @@
-export default function Card({ content }) {
+export default function Card({ product }) {
   return (
-    <div className="col-4" key={content.id}>
+    <div className="col-4" key={product.id}>
       <div className="card">
         <ul>
-          <li>{content.title}</li>
-          <li>{content.ogTitle}</li>
-          <li>{content.ogLanguage}</li>
-          <li>{content.rating}</li>
+          <li>{product.title}</li>
+          <li>{product.ogTitle}</li>
+          <li>{product.ogLanguage}</li>
+          <li>{product.rating}</li>
         </ul>
       </div>
     </div>

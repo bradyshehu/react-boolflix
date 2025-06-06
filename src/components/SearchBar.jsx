@@ -2,9 +2,12 @@ import { useState } from "react";
 import { useSearch } from "../contexts/SearchContext";
 
 export default function SearchBar() {
-  const [query, setQuery] = useState();
+  const [query, setQuery] = useState("");
   const { search } = useSearch();
 
+  function handleChange(e) {
+    setQuery(e.target.value);
+  }
   function handleSubmit(e) {
     e.preventDefault();
     search(query);
@@ -16,7 +19,7 @@ export default function SearchBar() {
         <input
           type="text"
           value={query}
-          onChange={(e) => setQuery(e.target.value)}
+          onChange={handleChange}
           placeholder="Enter movie..."
         />
 

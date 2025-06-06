@@ -1,9 +1,13 @@
-import { useMovies } from "../../contexts/SearchContext";
+import Card from "./Card";
 
-export default function CardList() {
-  const movies = useMovies();
-  return console.log(movies);
-  // <div className="container">
-  //   <div className="row">{}</div>
-  // </div>
+export default function CardList({ products }) {
+  return (
+    <div className="container">
+      <div className="row g-4">
+        {products.map((product) => {
+          return <Card key={product.id} product={product} />;
+        })}
+      </div>
+    </div>
+  );
 }

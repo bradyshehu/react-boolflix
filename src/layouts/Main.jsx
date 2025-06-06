@@ -1,7 +1,13 @@
+import CardList from "./ui/CardList";
+import { useSearch } from "../contexts/SearchContext";
+
 export default function Main() {
+  const { movies } = useSearch();
+
   return (
     <main>
-      <h1>App React</h1>
+      <CardList products={movies} />
+      {/* <CardList /> */}
     </main>
   );
 }

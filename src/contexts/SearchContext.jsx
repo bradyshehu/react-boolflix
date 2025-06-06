@@ -25,9 +25,9 @@ const SearchProvider = ({ children }) => {
       const result = res.data.results.map((movie) => ({
         id: movie.id,
         title: movie.title,
-        ogTitle: original_title,
-        ogLanguage: original_language,
-        rating: vote_average,
+        ogTitle: movie.original_title,
+        ogLanguage: movie.original_language,
+        rating: movie.vote_average,
       }));
       setMovies(result);
     });
