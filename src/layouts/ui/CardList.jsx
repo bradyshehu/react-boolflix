@@ -1,4 +1,4 @@
-import { useMovies } from "../../contexts/MovieContext";
+import { useMovies } from "../../contexts/SearchContext";
 
 export default function CardList() {
   const movies = useMovies();
