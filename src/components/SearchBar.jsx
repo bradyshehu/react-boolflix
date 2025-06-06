@@ -22,8 +22,6 @@ export default function SearchBar() {
           onChange={handleChange}
           placeholder="Enter movie..."
         />
-
-        <button className="btn btn-primary">cerca</button>
       </form>
     </div>
   );

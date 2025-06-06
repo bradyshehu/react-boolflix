@@ -3,7 +3,7 @@ import SearchBar from "../components/SearchBar";
 export default function Header() {
   return (
     <header>
-      {/* logo */}
+      <h2>BOOLFLIX</h2>
       <SearchBar />
     </header>
   );

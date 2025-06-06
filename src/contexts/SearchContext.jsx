@@ -29,17 +29,19 @@ const SearchProvider = ({ children }) => {
         ogTitle: movie.original_title,
         ogLanguage: movie.original_language,
         rating: movie.vote_average,
+        poster: `http://image.tmdb.org/t/p/w342/${movie.poster_path}`,
       }));
       setMovies(result);
     });
 
     axios.get(`${apiUrl}tv?${params}`).then((res) => {
-      const result = res.data.results.map((movie) => ({
-        id: movie.id,
-        title: movie.name,
-        ogTitle: movie.original_name,
-        ogLanguage: movie.original_language,
-        rating: movie.vote_average,
+      const result = res.data.results.map((serie) => ({
+        id: serie.id,
+        title: serie.name,
+        ogTitle: serie.original_name,
+        ogLanguage: serie.original_language,
+        rating: serie.vote_average,
+        poster: `http://image.tmdb.org/t/p/w342/${serie.poster_path}`,
       }));
       setSeries(result);
     });
