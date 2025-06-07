@@ -1,28 +1,30 @@
-// import { fontAwesome } from "fontawesome";
-// import { faStar as solidStar } from "@fortawesome/free-solid-svg-icons";
-// import { faStar as regularStar } from "@fortawesome/free-regular-svg-icons";
+import StarRating from "./StarRating";
 
 export default function Card({ product }) {
-  // const finalRating = Math.ceil(product.rating);
-
-  // for (let i; i < 5; i++) {
-  //   if (i <= finalRating) {
-  //   } else {
-  //   }
-  // }
-
   return (
-    <div className="col-4" key={product.id}>
-      <div className="card">
-        <ul>
-          <li>{product.title}</li>
-          <li>{product.ogTitle}</li>
-          <li>{product.ogLanguage}</li>
-          <li>{product.rating}</li>
-          <li>
-            <img src={product.poster} alt="" />
-          </li>
-        </ul>
+    <div className="product-card">
+      <img src={product.poster} alt="" />
+      <div className="product-on-hover">
+        <span>
+          <b>Titolo: </b>
+          {product.title}
+        </span>
+        <br />
+        <span>
+          <b>Titolo Originale: </b>
+          {product.ogTitle}
+        </span>
+        <br />
+        <span>
+          <b>Voto: </b>
+          <StarRating rating={product.rating} />
+        </span>
+        <br />
+        <span>
+          <b>Overview: </b>
+          {product.overview}
+        </span>
+        <br />
       </div>
     </div>
   );

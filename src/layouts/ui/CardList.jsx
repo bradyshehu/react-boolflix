@@ -2,12 +2,13 @@ import Card from "./Card";
 
 export default function CardList({ products }) {
   return (
-    <div className="container">
-      <div className="row g-4">
-        {products.map((product) => {
-          return <Card key={product.id} product={product} />;
-        })}
-      </div>
-    </div>
+    <section
+      className="d-flex flex-wrap g-4 justify-content-between"
+      id="product-section"
+    >
+      {products.map((product) => {
+        return <Card key={product.id} product={product} />;
+      })}
+    </section>
   );
 }

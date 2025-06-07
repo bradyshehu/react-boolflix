@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useSearch } from "../contexts/SearchContext";
 
 export default function SearchBar() {
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState("ritorno al fut");
   const { search } = useSearch();
 
   function handleChange(e) {

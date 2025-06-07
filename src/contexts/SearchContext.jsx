@@ -29,6 +29,8 @@ const SearchProvider = ({ children }) => {
         ogTitle: movie.original_title,
         ogLanguage: movie.original_language,
         rating: movie.vote_average,
+        overview: movie.overview,
+
         poster: `http://image.tmdb.org/t/p/w342/${movie.poster_path}`,
       }));
       setMovies(result);
@@ -41,6 +43,7 @@ const SearchProvider = ({ children }) => {
         ogTitle: serie.original_name,
         ogLanguage: serie.original_language,
         rating: serie.vote_average,
+        overview: serie.overview,
         poster: `http://image.tmdb.org/t/p/w342/${serie.poster_path}`,
       }));
       setSeries(result);

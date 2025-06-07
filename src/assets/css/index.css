@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 header {
   padding-top: 3rem;
   padding-bottom: 1rem;
@@ -10,4 +14,54 @@ header {
 }
 header h2 {
   color: red;
+}
+
+main {
+  padding-top: 1rem;
+  background-color: #434343;
+  color: white;
+}
+
+main .section-media img {
+  display: block;
+}
+
+main .product-section {
+  flex-wrap: wrap;
+  max-width: 100vh;
+}
+main .product-card {
+  border: 2px white solid;
+  margin-bottom: 3rem;
+  position: relative;
+  /* background-color: black; */
+}
+
+main .product-on-hover {
+  overflow: auto;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: black;
+  color: white;
+  z-index: -5;
+  padding: 3rem 1rem;
+  text-align: start;
+}
+
+main .product-on-hover ul {
+  list-style: none;
+}
+
+/* hover */
+main .product-card:hover {
+  cursor: pointer;
+  /* display: none; */
+}
+
+main .product-card:hover .product-on-hover {
+  z-index: 5;
+  cursor: pointer;
 }
