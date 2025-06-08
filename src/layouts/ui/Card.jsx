@@ -3,7 +3,7 @@ import StarRating from "./StarRating";
 export default function Card({ product }) {
   return (
     <div className="product-card">
-      <img src={product.poster} alt="" />
+      <img src={product.poster} alt={`${product.ogTitle}`} />
       <div className="product-on-hover">
         <span>
           <b>Titolo: </b>

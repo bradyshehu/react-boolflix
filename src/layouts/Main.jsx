@@ -6,7 +6,7 @@ export default function Main() {
 
   return (
     <main>
-      <div className="container d-flex flex-column">
+      <div className="container">
         <h3>Film</h3>
         <CardList products={movies} />
         <h3>Serie TV</h3>

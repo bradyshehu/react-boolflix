@@ -9,11 +9,9 @@ export default function StarRating({ rating }) {
   const stars = [];
 
   for (let i = 0; i < maxStars; i++) {
-    if (ratingTo5 >= i + 1) {
-      stars.push(<FontAwesomeIcon icon={solidStar} />);
-    } else {
-      stars.push(<FontAwesomeIcon icon={regularStar} />);
-    }
+    ratingTo5 >= i + 1
+      ? stars.push(<FontAwesomeIcon icon={solidStar} />)
+      : stars.push(<FontAwesomeIcon icon={regularStar} />);
   }
 
   return <div>{stars}</div>;
